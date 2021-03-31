@@ -1,0 +1,16 @@
+spring:
+  datasource:
+#    从false后添加的是表示支持她批量操作的
+    url: jdbc:mysql://127.0.0.1:3306/db_soft1921?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 189652802200059
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  #  指定相应接口对应的xml文件所在目录
+  mapper-locations: classpath:mapper/*.xml
+  #  实体类所在包
+  type-aliases-package: com.gin.boot.mybatis.domain
+  configuration:
+    # mybatis开启驼峰式命名
+    map-underscore-to-camel-case: true

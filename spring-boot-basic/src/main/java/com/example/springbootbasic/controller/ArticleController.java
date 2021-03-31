@@ -46,7 +46,7 @@ public class ArticleController {
                 .author("Gin")
                 .title("Spring Boot从⼊⻔到放弃")
                 .content("Spring Boot从⼊⻔到放弃")
-                .createTime(new Date())
+                .updateTime(new Date())
                 .readers(readerList)
                 .build();
         log.info("article: " + article);
@@ -84,7 +84,7 @@ public class ArticleController {
                 .title(title)
                 .content(content)
                 .author(author)
-                .createTime(createTime)
+                .updateTime(createTime)
                 .build();
         log.info("saveArticle:" + article);
         return AjaxResponse.success(article);

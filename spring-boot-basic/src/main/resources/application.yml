@@ -1,28 +1,26 @@
+
+#第一种测试端口方法
+#  profiles:
+#        active: test
+
+#spring:
+#  profiles:
+#    active: dev
+
+
+
 server:
-  port:8080
-
-#上传文件大小的配置，设置为-1为无限制
-spring:
+  port: 8080
   servlet:
-    multipart:
-      max-file-size: 300MB
-      max-request-size: 300MB
-
-family:
-  family-name: happy family
-  father:
-    name: tom
-    age: ${random.int(25,40)}
-  mother:
-    name: hello
-  alias: [lovely,alice]
-  child:
-    name: jack
-  age: ${random.int(5,16)}
-  friends:
-    - hobby: play
-      gender: male
-      age: 20
-    - hobby: sing
-      gender: female
-      age: 21
+  context-path: /
+spring:
+  datasource:
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+  username: root
+  password: Gin20001217
+jpa:
+  database: MySQL
+  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  show-sql: true
+  hibernate:
+  ddl-auto: update

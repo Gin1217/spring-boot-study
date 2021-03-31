@@ -20,7 +20,7 @@ class FamilyTest {
     private Family family;
 
     @Test
-    void getFamilyName() {
+    void testFamily() {
         log.info("family: "+family);
     }
 }
